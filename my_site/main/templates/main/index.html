@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Main page{% endblock %}
+{% if messages %}
+        	{% for message in messages %}
+          	<div class="alert alert-{{ message.tags }}">
+            	{{ message }}
+          	</div>
+        	{% endfor %}
+{% endif %}
+{% block content %}
+<div class="features">
+    <h1>Main page</h1>
+    <p>welcome text</p>
+    <button class="btn btn-info">Back</button>
+</div>
+{% endblock %}
